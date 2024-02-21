@@ -6,6 +6,10 @@ Este relatório descreve o processo de criação de uma instância de máquina v
 
 ## Objetivo
 
+- Criar uma instância EC2 na AWS;
+- Estabelecer uma conexão SSH segura com a instância;
+- Documentar todo o processo, incluindo capturas de tela relevantes, para demonstrar competência no gerenciamento de criação de instâncias na AWS.
+
 ## Materiais
 
 ## Método
