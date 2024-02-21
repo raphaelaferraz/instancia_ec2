@@ -12,6 +12,10 @@ Este relatório descreve o processo de criação de uma instância de máquina v
 
 ## Materiais
 
+- **Amazon Web Services (AWS) Account**: Uma conta na AWS para criar e gerenciar recursos;
+- **PUTTY**: Uma ferramenta gratuita de emulação de terminal e cliente SSH para Windows;
+- **Computador com acesso à Internet**: Para acessar o console da AWS e a ferramenta PUTTY.
+
 ## Método
 
 ## Resultados
