@@ -18,6 +18,28 @@ Este relatório descreve o processo de criação de uma instância de máquina v
 
 ## Método
 
+O passo a passo listado abaixo foi utilizado para obter os resultados que serão listados a seguir.
+
+1. **Criação da Instância EC2**:
+
+- Acessei a Página incial do Console da AWS;
+- Procurei o serviço "EC2" e selecioná-lo;
+- Selecionei "Executar Instância" para criar uma nova instância;
+- Na página "Launch an instance" preenchi as seguintes informações:
+  - Nome, que se refere ao nome da Instância
+  - A imagem da máquina da amazon (Amazon Linux)
+  - Criei um novo par de chaves para o login. Essa chave deve ser do tipo `.ppk`
+  - Selecionei, em Configurações de Rede, a habilitação do tráfego HTTPS e HTTP para internet
+- Após preencher tudo isso, é possível clicar em "Excutar instância"
+
+2. **Acesso à instância via SSH**:
+
+- Realizei a instalação do software Putty;
+- Ao abrir o software, preenchi o campo `Host name (or IP address)` com o endereço IP público da instância criada
+- Depois, fui até `Auth`, dentro de `SSH`, e anexei o par de chaves criados anteriormente no formato `.ppk`
+- Logo após, cliquei em `Open`, resultado na abertura da conexão SSH
+
 ## Resultados
+
 
 ## Conclusão
