@@ -45,8 +45,12 @@ O passo a passo listado abaixo foi utilizado para obter os resultados que serão
   ![Print da Instância Criada dentro do Painel da AWS](/dados-instancia.png)
 
 - **Acesso via SSH com Putty realizado com sucesso**
-![Print do Putty com o acesso à instância EC2 em conjunto com o IP público da instância](/print-putty.png)
+  ![Print do Putty com o acesso à instância EC2 em conjunto com o IP público da instância](/print-putty.png)
+
+- **IPs da máquina EC2 criada**
+  - IP Público: 3.91.223.154;
+  - IP Privado: 172.31.30.91
 
 ## Conclusão
 
-A execução bem-sucedida deste projeto demonstrou a capacidade de criar e acessar uma instância EC2 na AWS usando SSH. Este processo reforça a importância de entender os serviços de computação em nuvem e as práticas de segurança necessárias para o gerenciamento eficaz de recursos na nuvem. A experiência adquirida aqui servirá como uma base sólida para futuros projetos envolvendo infraestrutura na AWS, inclusive para o projeto atual que está sendo desenvolvido para a Gerando Falcões. 
+A execução bem-sucedida deste projeto demonstrou a capacidade de criar e acessar uma instância EC2 na AWS usando SSH. Este processo reforça a importância de entender os serviços de computação em nuvem e as práticas de segurança necessárias para o gerenciamento eficaz de recursos na nuvem. A experiência adquirida aqui servirá como uma base sólida para futuros projetos envolvendo infraestrutura na AWS, inclusive para o projeto atual que está sendo desenvolvido para a Gerando Falcões.
