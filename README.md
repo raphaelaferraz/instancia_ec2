@@ -41,5 +41,10 @@ O passo a passo listado abaixo foi utilizado para obter os resultados que serão
 
 ## Resultados
 
+- **Criação da Instância EC2**
+  ![Print da Instância Criada dentro do Painel da AWS](/dados-instancia.png)
+
+- **Acesso via SSH com Putty realizado com sucesso**
+![Print do Putty com o acesso à instância EC2 em conjunto com o IP público da instância](/print-putty.png)
 
 ## Conclusão
