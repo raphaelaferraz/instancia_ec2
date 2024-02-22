@@ -26,18 +26,53 @@ O passo a passo listado abaixo foi utilizado para obter os resultados que serão
 - Procurei o serviço "EC2" e selecioná-lo;
 - Selecionei "Executar Instância" para criar uma nova instância;
 - Na página "Launch an instance" preenchi as seguintes informações:
-  - Nome, que se refere ao nome da Instância
-  - A imagem da máquina da amazon (Amazon Linux)
-  - Criei um novo par de chaves para o login. Essa chave deve ser do tipo `.ppk`
-  - Selecionei, em Configurações de Rede, a habilitação do tráfego HTTPS e HTTP para internet
+
+  - Nome: Defini um nome significativo para a instância para facilitar sua identificação. (imagem 1)
+  - AMI: Escolhi a Amazon Linux AMI porque ela possui uma otimização para desempenho em instâncias EC2 e vem com diversas ferramentas e utilitários AWS pré-instalados. Isso faz com que o tempo de configuração seja reduzido e a sobrecarga de manutenção também, além de oferecer melhor compatibilidade e performance com os serviços da AWS. (imagem 2)
+  - Tipo de Instância: Escolhi o tipo de instância `t3.micro` por causa do seu equilíbrio entre custo e eficiência para casos de uso que não exigem recursos computacionais intensivos, que é o caso desta atividade. Os tipos `t2` foram projetados para forenecer uma quantidade moderada de capacidade de CPU base, permitindo aumentar o desempenho, utilizando créditos de CPU acumulados durante períodos de baixa utilização. (imagem 3)
+  - Configuração de Rede: Optei por deixar as configurações padrçoes de VPC e sub-red, haja vista que o cenário atual da atividade não possui requisitos específicos de rede, de modo a simplificar o processo de implantação da instância de EC2. Porém, vale ressaltar que adicionei regras de segurança de modo a permitir tráfego HTTP e HTTPS, haja vista que é essencial para que tal instância seja acessada de forma segura pela internet. (imagem 4)
+  - Par de Chaves: Criei um novo par de chaves do tipo `.ppk` para realizar a autenticação na instância EC2 via SSH. Isso faz com que a instância seja acessada somente se tiver a chave privada correspondente a ela, de modo a garantir uma segurança maior da instância, previnindo de acessos não autorizados. (imagem 5)
+  - Armazenamento: Optei por deixar as configurações padrões de armazenamento de 8 GiB com um volume raiz gp3, pois no cenário atual da atividade não possui requisitos específicos de armazenamento. Ademais, tais configurações permitem um equilíbrio entre curso e desempenho, além de que os volumes gp3 são versáteis e oferecem um desempenho consistente para diferentes aplicações, caso esta instância fosse utilizada para algo específico.
 - Após preencher tudo isso, é possível clicar em "Excutar instância"
 
-2. **Acesso à instância via SSH**:
+<sub>Imagem 1 - Definição de nome EC2
 
+![Espaço de definição de nome](/nome.png)
+
+<sub>Imagem 2 - Seleçao da AMI </sub>
+
+![Seleção da AMI](/ami.png)
+
+<sub>Imagem 3 - Tipo de Instância</sub>
+
+![Seleção do tipo de instância](/tipo.png)
+
+<sub>Imagem 4 - Configurações de Rede</sub>
+
+![Configurações de Rede](/rede.png)
+
+<sub>Imagem 5 - Seleção do par de chaves</sub>
+
+![Par de chaves](/chaves.png)
+
+<sub>Imagem 6 - Tipo de Armazenamento</sub>
+
+![Armazenaento](/armazenamento.png)
+
+2. **Acesso à instância via SSH**:
+Foi escolhido o software `Putty` para realizar o acesso via SSH à instância EC2 criada. Essa escolha se baseia no fato da simplicidade do software de realizar tal conexão, haja vista que é necessário somente o IP da máquina e a chave privada dela. Nesse sentido, o passo a passo listdo e ilustrado a seguir são referentes a esse software:
 - Realizei a instalação do software Putty;
-- Ao abrir o software, preenchi o campo `Host name (or IP address)` com o endereço IP público da instância criada
-- Depois, fui até `Auth`, dentro de `SSH`, e anexei o par de chaves criados anteriormente no formato `.ppk`
+- Ao abrir o software, preenchi o campo `Host name (or IP address)` com o endereço IP público da instância criada (imagem 7)
+- Depois, fui até `Auth`, dentro de `SSH`, e anexei o par de chaves criados anteriormente no formato `.ppk` (imagem 8)
 - Logo após, cliquei em `Open`, resultado na abertura da conexão SSH
+
+<sub>Imagem 7 - Preenchimento dos campos com o endereço IP Público da instância criada</sub>
+
+![Dados da instância no Putty](/putty-ip.png)
+
+<sub>Imagem 8 - Anexo do par de chaves no putty</sub>
+
+![Par de chaves no putty](/putty-chave.png)
 
 ## Resultados
 
@@ -45,10 +80,9 @@ O passo a passo listado abaixo foi utilizado para obter os resultados que serão
   ![Print da Instância Criada dentro do Painel da AWS](/dados-instancia.png)
 
 - **Acesso via SSH com Putty realizado com sucesso**
-  ![Print do Putty com o acesso à instância EC2 em conjunto com o IP público da instância](/print-putty.png)
+  ![Print do Putty com o acesso à instância EC2 em conjunto com o IP público da instância](/putty.png)
 
-- **IPs da máquina EC2 criada**
-  - IP Público: 3.91.223.154;
+- **IP privado da máquina EC2 criada**
   - IP Privado: 172.31.30.91
 
 ## Conclusão
